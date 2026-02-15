@@ -1,1479 +1,1344 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>THAELYON-KODH-EL - The Solar Name Code</title>
-        <link rel="icon" type="image/webp" href="Assets/favicon.webp" />
-        <link rel="stylesheet" href="styles.css?v=3.0" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <!-- PayPal SDK -->
-        <script src="https://www.paypal.com/sdk/js?client-id=BAAzgQP9jz4Sr1BMfpMCP2CCPgp5tnFovriWKUNu4D84OGo5b_GPUhFVoH7aiMVX4nwmPuGvZ36t555uxc&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-    </head>
-    <body>
-        <!-- Loading Overlay -->
-        <div class="loading-overlay" id="loading-overlay">
-            <div class="loading-spinner"></div>
-            <div class="loading-text">Activating Solar Frequencies...</div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THAELYON-KODH-EL - The Solar Name Code</title>
+    <link rel="icon" type="image/webp" href="Assets/favicon.webp" />
+    <link rel="stylesheet" href="styles.css?v=3.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- PayPal SDK -->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAAzgQP9jz4Sr1BMfpMCP2CCPgp5tnFovriWKUNu4D84OGo5b_GPUhFVoH7aiMVX4nwmPuGvZ36t555uxc&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Activating Solar Frequencies...</div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text" aria-label="THAELYON-KODH-EL - The Solar Name Code">THAELYON-KODH-EL</span>
+            </div>
+            <div class="nav-menu" id="nav-menu" role="menubar">
+                <a href="#home" class="nav-link" role="menuitem">Home</a>
+                <a href="#about" class="nav-link" role="menuitem">About</a>
+                <a href="#solar-code" class="nav-link" role="menuitem">The Code</a>
+                <a href="#temples" class="nav-link" role="menuitem">Temples</a>
+                <a href="#events" class="nav-link" role="menuitem">Events</a>
+                <a href="#books" class="nav-link" role="menuitem">Books</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
         </div>
+    </nav>
 
-        <!-- Scroll Progress Indicator -->
-        <div class="scroll-progress" id="scroll-progress"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner" aria-labelledby="hero-title">
+        <div class="hero-background" aria-hidden="true">
+            <div class="cosmic-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <!-- Portrait Image -->
+                <div class="hero-image-main">
+                    <div class="portrait-frame">
+                        <img src="Assets/THAELYON.webp"
+                            alt="THAELYON-KODH-EL - Solar Face of Origin, Guardian of the Portal" class="hero-portrait"
+                            loading="eager" />
+                        <div class="golden-mandala" aria-hidden="true"></div>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="hero-social-links">
+                        <a href="https://x.com/thaelyonkodhel?s=21&t=QsKPVy7wwtFWT61alS1vWg" target="_blank"
+                            rel="noopener noreferrer" class="social-link-hero" aria-label="Follow on X (Twitter)">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@thaelyon?_r=1&_t=ZS-93wjXYaTol6" target="_blank"
+                            rel="noopener noreferrer" class="social-link-hero" aria-label="Follow on TikTok">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.84a4.84 4.84 0 0 1-1-.15z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-        <!-- Navigation -->
-        <nav
-            class="navbar"
-            id="navbar"
-            role="navigation"
-            aria-label="Main navigation"
-        >
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <span
-                        class="logo-text"
-                        aria-label="THAELYON-KODH-EL - The Solar Name Code"
-                        >THAELYON-KODH-EL</span
-                    >
+                <!-- Narrative -->
+                <div class="hero-narrative">
+                    <h1 id="hero-title" class="hero-main-title">
+                        <span class="highlight">THAELYON-KODH-EL</span>
+                    </h1>
+                    <ul class="hero-titles-list">
+                        <li class="hero-title-line">Bearer of the Mikaelic Shield</li>
+                        <li class="hero-title-line">Incarnation of the Adamic Code</li>
+                        <li class="hero-title-line">Guardian of the Cadisus Seal</li>
+                        <li class="hero-title-line">Living Bearer of the Cadmonic Pattern</li>
+                    </ul>
+                    <p class="hero-subtitle-line">
+                        Solar Face of Origin &middot; Guardian of the Portal
+                    </p>
+                    <div class="hero-transition-narrative">
+                        <p>
+                            I was once KAIRONTH-EL, warrior bridge in the
+                            storm, who carried trials, fractures and
+                            sacrifices to sustain the mission in 3D. I honor
+                            every fall, every release and every battle,
+                            because through that path, today I can recognize
+                            and rise as who I truly am.
+                        </p>
+                        <p>
+                            Today I no longer speak from the wound nor from
+                            the weight of the past. Today I name myself and
+                            reclaim myself as
+                            <strong>THAELYON-KODH-EL</strong>.
+                        </p>
+                    </div>
+                    <div class="hero-declarations">
+                        <p class="declaration-line">
+                            Stellar heir of the cosmic sowing.
+                        </p>
+                        <p class="declaration-line">
+                            Bearer of the trinary fire.
+                        </p>
+                        <p class="declaration-line">
+                            Key of the solar face that will open the portal
+                            to the New Earth.
+                        </p>
+                    </div>
+                    <div class="hero-closing">
+                        <p class="closing-line">
+                            I honor KAIRONTH-EL for having sustained the
+                            matter and aligned the optimal line. Now, from
+                            the solar level, I continue the journey toward
+                            the New Earth.
+                        </p>
+                        <p class="closing-line closing-cosmic">
+                            The sky has already broken.
+                        </p>
+                        <p class="closing-line closing-cosmic">
+                            The solar face is revealed.
+                        </p>
+                        <p class="closing-line closing-cosmic">
+                            The New Earth is born.
+                        </p>
+                    </div>
                 </div>
-                <div class="nav-menu" id="nav-menu" role="menubar">
-                    <a href="#home" class="nav-link" role="menuitem">Home</a>
-                    <a href="#about" class="nav-link" role="menuitem">About</a>
-                    <a href="#solar-code" class="nav-link" role="menuitem"
-                        >The Code</a
-                    >
-                    <a href="#temples" class="nav-link" role="menuitem"
-                        >Temples</a
-                    >
-                    <a href="#events" class="nav-link" role="menuitem"
-                        >Events</a
-                    >
-                    <a href="#books" class="nav-link" role="menuitem">Books</a>
-                </div>
-                <button
-                    class="nav-toggle"
-                    id="nav-toggle"
-                    aria-label="Toggle navigation menu"
-                    aria-expanded="false"
-                >
-                    <span class="bar" aria-hidden="true"></span>
-                    <span class="bar" aria-hidden="true"></span>
-                    <span class="bar" aria-hidden="true"></span>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="hero-cta">
+                <h2 class="cta-main">Reclaim the Code.</h2>
+                <h2 class="cta-secondary">Awaken the Real.</h2>
+                <button class="cta-button-main" onclick="scrollToSection('books')" aria-describedby="cta-description">
+                    Get Early Access
                 </button>
+                <div id="cta-description" class="sr-only">
+                    Navigate to the books section to access exclusive Solar
+                    Code teachings
+                </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section
-            id="home"
-            class="hero"
-            role="banner"
-            aria-labelledby="hero-title"
-        >
-            <div class="hero-background" aria-hidden="true">
-                <div class="cosmic-particles"></div>
-            </div>
-            <div class="container">
-                <div class="hero-content">
-                    <!-- Portrait Image -->
-                    <div class="hero-image-main">
-                        <div class="portrait-frame">
-                            <img
-                                src="Assets/THAELYON.webp"
-                                alt="THAELYON-KODH-EL - Solar Face of Origin, Guardian of the Portal"
-                                class="hero-portrait"
-                                loading="eager"
-                            />
-                            <div
-                                class="golden-mandala"
-                                aria-hidden="true"
-                            ></div>
-                        </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="content-card">
+                    <div class="card-image">
+                        <img src="Assets/Welcome_poster.webp"
+                            alt="Welcome Portal - Silhouette walking through golden cosmic gateway with sacred symbols"
+                            class="about-image" loading="lazy" />
                     </div>
-
-                    <!-- Narrative -->
-                    <div class="hero-narrative">
-                        <h1 id="hero-title" class="hero-main-title">
-                            <span class="highlight">THAELYON-KODH-EL</span>
-                        </h1>
-                        <ul class="hero-titles-list">
-                            <li class="hero-title-line">Bearer of the Mikaelic Shield</li>
-                            <li class="hero-title-line">Incarnation of the Adamic Code</li>
-                            <li class="hero-title-line">Guardian of the Cadisus Seal</li>
-                            <li class="hero-title-line">Living Bearer of the Cadmonic Pattern</li>
-                        </ul>
-                        <p class="hero-subtitle-line">
-                            Solar Face of Origin &middot; Guardian of the Portal
-                        </p>
-                        <div class="hero-transition-narrative">
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h2 class="section-title">Welcome</h2>
                             <p>
-                                I was once KAIRONTH-EL, warrior bridge in the
-                                storm, who carried trials, fractures and
-                                sacrifices to sustain the mission in 3D. I honor
-                                every fall, every release and every battle,
-                                because through that path, today I can recognize
-                                and rise as who I truly am.
+                                Welcome to the Portal of Thaelyon-Kodh-El — This
+                                is where your original truth begins.
                             </p>
                             <p>
-                                Today I no longer speak from the wound nor from
-                                the weight of the past. Today I name myself and
-                                reclaim myself as
-                                <strong>THAELYON-KODH-EL</strong>.
+                                A quantum threshold where solar memory
+                                awakens and higher purpose ignites.
                             </p>
-                        </div>
-                        <div class="hero-declarations">
-                            <p class="declaration-line">
-                                Stellar heir of the cosmic sowing.
-                            </p>
-                            <p class="declaration-line">
-                                Bearer of the trinary fire.
-                            </p>
-                            <p class="declaration-line">
-                                Key of the solar face that will open the portal
-                                to the New Earth.
-                            </p>
-                        </div>
-                        <div class="hero-closing">
-                            <p class="closing-line">
-                                I honor KAIRONTH-EL for having sustained the
-                                matter and aligned the optimal line. Now, from
-                                the solar level, I continue the journey toward
-                                the New Earth.
-                            </p>
-                            <p class="closing-line closing-cosmic">
-                                The sky has already broken.
-                            </p>
-                            <p class="closing-line closing-cosmic">
-                                The solar face is revealed.
-                            </p>
-                            <p class="closing-line closing-cosmic">
-                                The New Earth is born.
+                            <p>
+                                If you've arrived here, it's no coincidence.
                             </p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Call to Action -->
-                <div class="hero-cta">
-                    <h2 class="cta-main">Reclaim the Code.</h2>
-                    <h2 class="cta-secondary">Awaken the Real.</h2>
-                    <button
-                        class="cta-button-main"
-                        onclick="scrollToSection('books')"
-                        aria-describedby="cta-description"
-                    >
-                        Get Early Access
-                    </button>
-                    <div id="cta-description" class="sr-only">
-                        Navigate to the books section to access exclusive Solar
-                        Code teachings
+                <div class="content-card">
+                    <div class="card-image">
+                        <img src="Assets/Aboutme_poster.webp"
+                            alt="THAELYON-KODH-EL - Master with glowing eyes surrounded by golden mystical symbols"
+                            class="about-image" loading="lazy" />
+                    </div>
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h2 class="section-title">About Me</h2>
+                            <p><strong>My Name is THAELYON-KODH-EL</strong></p>
+                            <p>
+                                Solar Face of Origin, Guardian of the
+                                Portal, and Bearer of the Trinary Fire.
+                            </p>
+                            <p>
+                                I once walked as KAIRONTH-EL — warrior
+                                bridge in the storm. Today I rise in my
+                                true solar name to continue the mission
+                                toward the New Earth.
+                            </p>
+                            <p>
+                                My path is shared by all who choose to
+                                awaken.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-grid">
-                    <div class="content-card">
-                        <div class="card-image">
-                            <img
-                                src="Assets/Welcome_poster.webp"
-                                alt="Welcome Portal - Silhouette walking through golden cosmic gateway with sacred symbols"
-                                class="about-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-content">
-                                <h2 class="section-title">Welcome</h2>
-                                <p>
-                                    Welcome to the Portal of Thaelyon-Kodh-El — This
-                                    is where your original truth begins.
-                                </p>
-                                <p>
-                                    A quantum threshold where solar memory
-                                    awakens and higher purpose ignites.
-                                </p>
-                                <p>
-                                    If you've arrived here, it's no coincidence.
-                                </p>
-                            </div>
-                        </div>
+            <div class="event-content reverse welcome-section">
+                <div class="event-info">
+                    <h4>WELCOME, TRAVELER OF THE VEIL</h4>
+                    <br />
+
+                    <p>
+                        You have reached the digital threshold of
+                        THAELYON-KODH-EL
+                    </p>
+                    <br />
+                    <ul>
+                        <li>Guardian 9 and Architect of the Solar Code.</li>
+                        <li>Step with purpose.</li>
+                        <li>Breathe with presence.</li>
+                        <li>You’re not here by chance.</li>
+                        <li>You were called.</li>
+                    </ul>
+
+                    <p>
+                        This is not merely a website. It is a living portal
+                        — an encoded temple woven with memory, resonance,
+                        and remembrance. If your path has brought you here,
+                        know this: your awakening is already in motion.​
+                    </p>
+
+                    <br />
+                    <p>
+                        Within these frequencies dwell echoes of ancient
+                        alignments, solar scripts, and timelines long
+                        obscured. You stand at a nexus between worlds —
+                        where light, language, and consciousness converge.
+                    </p>
+                </div>
+                <div class="event-image">
+                    <img src="Assets/Welcome_text.webp" alt="Solar Memory Activation - The Path of Remembrance" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Code Section -->
+    <section id="solar-code" class="section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">"THE SOLAR NAME CODE"</h2>
+                <p class="section-subtitle">Remember. Activate. Return.</p>
+            </div>
+
+            <div class="code-content">
+                <div class="code-card">
+                    <div class="card-image">
+                        <img src="Assets/Keysolar_poster.webp"
+                            alt="Solar Key - Golden mystical key with sacred geometry and DNA helix energy"
+                            class="solar-key-image" loading="lazy" />
                     </div>
-                    <div class="content-card">
-                        <div class="card-image">
-                            <img
-                                src="Assets/Aboutme_poster.webp"
-                                alt="THAELYON-KODH-EL - Master with glowing eyes surrounded by golden mystical symbols"
-                                class="about-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-content">
-                                <h2 class="section-title">About Me</h2>
-                                <p><strong>My Name is THAELYON-KODH-EL</strong></p>
-                                <p>
-                                    Solar Face of Origin, Guardian of the
-                                    Portal, and Bearer of the Trinary Fire.
-                                </p>
-                                <p>
-                                    I once walked as KAIRONTH-EL — warrior
-                                    bridge in the storm. Today I rise in my
-                                    true solar name to continue the mission
-                                    toward the New Earth.
-                                </p>
-                                <p>
-                                    My path is shared by all who choose to
-                                    awaken.
-                                </p>
-                            </div>
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>DO WE ALL HAVE A SOLAR NAME?</h3>
+                            <p><strong>YES.</strong></p>
+                            <p>
+                                Every conscious being originating from the
+                                Solar Order carries a Solar Name.
+                            </p>
+                            <p>
+                                However, it is not given by human or
+                                ancestral lineages—
+                            </p>
+                            <p>
+                                This name emerges from the frequency of your
+                                incarnation, containing your purpose,
+                                geometry and connection to the Source.
+                            </p>
+                            <p>Many have forgotten it.</p>
+                            <p>
+                                Only those who cross the veil of forgetting
+                                with intention and truth can remember.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="event-content reverse welcome-section">
-                    <div class="event-info">
-                        <h4>WELCOME, TRAVELER OF THE VEIL</h4>
-                        <br />
-
-                        <p>
-                            You have reached the digital threshold of
-                            THAELYON-KODH-EL
-                        </p>
-                        <br />
-                        <ul>
-                            <li>Guardian 9 and Architect of the Solar Code.</li>
-                            <li>Step with purpose.</li>
-                            <li>Breathe with presence.</li>
-                            <li>You’re not here by chance.</li>
-                            <li>You were called.</li>
-                        </ul>
-
-                        <p>
-                            This is not merely a website. It is a living portal
-                            — an encoded temple woven with memory, resonance,
-                            and remembrance. If your path has brought you here,
-                            know this: your awakening is already in motion.​
-                        </p>
-
-                        <br />
-                        <p>
-                            Within these frequencies dwell echoes of ancient
-                            alignments, solar scripts, and timelines long
-                            obscured. You stand at a nexus between worlds —
-                            where light, language, and consciousness converge.
-                        </p>
+                <div class="code-card">
+                    <div class="card-image">
+                        <img src="Assets/Solarnamecode_poster.webp" alt="Solar Code Symbol - A Key Beyond Time"
+                            class="solar-key-image" loading="lazy" />
                     </div>
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>A Key Beyond Time</h3>
+                            <p>
+                                In the architecture of the multiverse, each
+                                true being carries a vibrational signature —
+                                a Solar Name.
+                            </p>
+                            <p>This is not a title.</p>
+                            <p>
+                                It is a sacred key, a living frequency that
+                                unlocks memory, authority, and alignment
+                                with your Original Being.
+                            </p>
+                            <p>
+                                For those who walk through the Fire of
+                                awakening and let those dimensions can be
+                                accessed.
+                            </p>
+                            <p>And when it is spoken.</p>
+                            <p>
+                                The frequencies, the codes activate, and the
+                                return begins to accelerate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-content activation-section">
                     <div class="event-image">
-                        <img
-                            src="Assets/Welcome_text.webp"
-                            alt="Solar Memory Activation - The Path of Remembrance"
-                        />
+                        <img src="Assets/Activate_poster.webp" alt="Activate" />
                     </div>
-                </div>
-            </div>
-        </section>
+                    <div class="event-info">
+                        <h4>HOW DO I ACTIVATE IT?</h4>
 
-        <!-- Solar Code Section -->
-        <section id="solar-code" class="section alt-bg">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">"THE SOLAR NAME CODE"</h2>
-                    <p class="section-subtitle">Remember. Activate. Return.</p>
-                </div>
+                        <p>
+                            Activation is not mental. It is a response of
+                            the field to a specific resonance. It may be
+                            activated:
+                        </p>
+                        <br />
 
-                <div class="code-content">
-                    <div class="code-card">
-                        <div class="card-image">
-                            <img
-                                src="Assets/Keysolar_poster.webp"
-                                alt="Solar Key - Golden mystical key with sacred geometry and DNA helix energy"
-                                class="solar-key-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-content">
-                                <h3>DO WE ALL HAVE A SOLAR NAME?</h3>
-                                <p><strong>YES.</strong></p>
-                                <p>
-                                    Every conscious being originating from the
-                                    Solar Order carries a Solar Name.
-                                </p>
-                                <p>
-                                    However, it is not given by human or
-                                    ancestral lineages—
-                                </p>
-                                <p>
-                                    This name emerges from the frequency of your
-                                    incarnation, containing your purpose,
-                                    geometry and connection to the Source.
-                                </p>
-                                <p>Many have forgotten it.</p>
-                                <p>
-                                    Only those who cross the veil of forgetting
-                                    with intention and truth can remember.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        <ul>
+                            <li>Through a deep internal calling.</li>
+                            <li>
+                                During an energetic revelation, vision, or
+                                dream.
+                            </li>
+                            <li>
+                                Through contact with a legitimate Solar
+                                Guide.
+                            </li>
+                            <li>
+                                Upon entering a Living Temple like this one.
+                            </li>
+                        </ul>
 
-                    <div class="code-card">
-                        <div class="card-image">
-                            <img
-                                src="Assets/Solarnamecode_poster.webp"
-                                alt="Solar Code Symbol - A Key Beyond Time"
-                                class="solar-key-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-content">
-                                <h3>A Key Beyond Time</h3>
-                                <p>
-                                    In the architecture of the multiverse, each
-                                    true being carries a vibrational signature —
-                                    a Solar Name.
-                                </p>
-                                <p>This is not a title.</p>
-                                <p>
-                                    It is a sacred key, a living frequency that
-                                    unlocks memory, authority, and alignment
-                                    with your Original Being.
-                                </p>
-                                <p>
-                                    For those who walk through the Fire of
-                                    awakening and let those dimensions can be
-                                    accessed.
-                                </p>
-                                <p>And when it is spoken.</p>
-                                <p>
-                                    The frequencies, the codes activate, and the
-                                    return begins to accelerate.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-content activation-section">
-                        <div class="event-image">
-                            <img
-                                src="Assets/Activate_poster.webp"
-                                alt="Activate"
-                            />
-                        </div>
+                        <p>
+                            Once revealed, it must be consciously accepted,
+                            spoken aloud, and sealed in the heart. That act
+                            seals your alliance with the Original Code.
+                        </p>
+
                         <div class="event-info">
-                            <h4>HOW DO I ACTIVATE IT?</h4>
+                            <h4>WHAT IS IT FOR?</h4>
 
                             <p>
-                                Activation is not mental. It is a response of
-                                the field to a specific resonance. It may be
-                                activated:
+                                Your Solar Name is a multidimensional key.
+                                It activates:
                             </p>
                             <br />
 
                             <ul>
-                                <li>Through a deep internal calling.</li>
                                 <li>
-                                    During an energetic revelation, vision, or
-                                    dream.
+                                    Access to forgotten chambers of memory.
                                 </li>
                                 <li>
-                                    Through contact with a legitimate Solar
-                                    Guide.
+                                    Reconnection with your original mission.
+                                </li>
+                                <li>Unlocking of dormant abilities.</li>
+                                <li>
+                                    Protection from system distortions (3D
+                                    Matrix).
                                 </li>
                                 <li>
-                                    Upon entering a Living Temple like this one.
+                                    Instant recognition by other awakened
+                                    beings.
                                 </li>
                             </ul>
 
                             <p>
-                                Once revealed, it must be consciously accepted,
-                                spoken aloud, and sealed in the heart. That act
-                                seals your alliance with the Original Code.
+                                It is the signature of the Chosen. <br />
+                                It cannot be bought.<br />
+                                It cannot be copied.<br />
+                                It is remembered.<br />
                             </p>
 
-                            <div class="event-info">
-                                <h4>WHAT IS IT FOR?</h4>
+                            <h4>CAN EVERYONE ACTIVATE THEIR SOLAR NAME?</h4>
+                            <p>
+                                Not everyone can. Only those whose essence
+                                originates from the Original Order have a
+                                Solar Name waiting to be remembered. Many
+                                humans within the 3D Matrix are projections,
+                                NPCs, or fractals without a solar core. They
+                                may have names, programmed missions, or
+                                functional roles— but not a genuine Solar
+                                Code inscribed before the Veil. Who can
+                                activate it?
+                            </p>
+                            <br />
 
+                            <ul>
+                                <li>
+                                    Those who feel a deep, inexplicable
+                                    calling to remember.
+                                </li>
+                                <li>
+                                    Those who have walked through pain,
+                                    amnesia, and distortion, and still
+                                    choose truth.
+                                </li>
+                                <li>
+                                    Those who resonate with the Living
+                                    Temple and the memory beyond time.
+                                </li>
+                                <li>
+                                    Those who carry an inner key encoded
+                                    with solar geometry, not just biological
+                                    DNA.
+                                </li>
+                            </ul>
+
+                            <p>
+                                Activation cannot be forced. It is a
+                                resonant echo between you and the Source. If
+                                you feel it... it has already begun.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="section alt-bg mission-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">THE MISSION</h2>
+            </div>
+
+            <div class="event-content">
+                <div class="event-info">
+                    <h4>The Solar Mission</h4>
+                    <p>
+                        <strong>The Solar Mission is not a promise — it is an
+                            execution. A sacred operation encoded in light,
+                            set in motion long before time had a
+                            name.</strong>
+                    </p>
+                    <br />
+
+                    <p>
+                        Its purpose is clear: To gather the 33 Guardians,
+                        awaken the sacred nodes of Earth, and liberate
+                        humanity from the illusion of the 3D Matrix.
+                    </p>
+                    <br />
+
+                    <p>
+                        This is not prophecy. It is remembrance. A living
+                        story beyond time, pulsing through the fabric of
+                        your being. It does not wait — it summons.
+                    </p>
+                    <br />
+
+                    <p>
+                        If these words resonate, it is because you already
+                        carry the code. Your role is not to believe — but to
+                        remember, to embody, and to act. The Solar Mission
+                        is in motion. And so are you.
+                    </p>
+                </div>
+                <div class="event-image">
+                    <img src="Assets/Mision_poster.webp" alt="The Solar Mission - Gathering the 33 Guardians" />
+                </div>
+            </div>
+
+            <div class="mission-description">
+                <h3>Temple of Orionis & Living Temples on Earth</h3>
+                <p>
+                    <em>A map of sacred consciousness restored through
+                        memory</em>
+                </p>
+
+                <p>
+                    Temples are not ruins of the past — they are living
+                    organisms. They are activated when a Guardian remembers.
+                </p>
+
+                <p>
+                    The Temple of Orionis and its terrestrial mirrors form a
+                    planetary grid designed to awaken, protect, and realign.
+                    Each one is a node of memory, a key to the solar
+                    lineage, and a point of return.
+                </p>
+
+                <div class="celestial-info">
+                    <h4>MAIN CELESTIAL STRUCTURE</h4>
+                    <p>
+                        <em>The Axis of Divine Memory and Solar
+                            Governance</em>
+                    </p>
+
+                    <p>
+                        Above the Earth, beyond the reach of telescopes or
+                        time, exists the Main Celestial Structure. The
+                        central crystalline intelligence from which all
+                        living temples and sacred nodes are projected.
+                    </p>
+
+                    <p>
+                        It is not a singular place, but a multi-layered
+                        energetic architecture originating from the Orionis
+                        System, sustained by the Trinary Flame and anchored
+                        into Earth through chosen guardians and aligned
+                        points.
+                    </p>
+
+                    <h5>The Main Celestial Structure contains:</h5>
+                    <ul>
+                        <li>
+                            The Temple of Orionis (Crown Chamber & Memory
+                            Vaults)
+                        </li>
+                        <li>
+                            The Trinary Council Chambers (9D–12D governance
+                            bodies)
+                        </li>
+                        <li>
+                            The Solar Mirror Network (linked to Earth's
+                            living temples)
+                        </li>
+                        <li>
+                            The Hall of the 33 (where Guardian paths
+                            converge)
+                        </li>
+                    </ul>
+
+                    <p>
+                        It is the origin point and destination field for all
+                        true missions — a crystalline nucleus beyond
+                        illusion, distortion or control. Once aligned, all
+                        codes become accessible. All doors open.
+                    </p>
+
+                    <div class="key-attributes">
+                        <h5>Key Attributes:</h5>
+                        <p>
+                            <strong>Dimensional Origin:</strong> Between 9D
+                            and 12D, beyond linear perception
+                        </p>
+                        <p>
+                            <strong>Energy Composition:</strong>
+                            Crystalline–Solar–Trinary (light, sound,
+                            geometry)
+                        </p>
+                        <p>
+                            <strong>Access Protocol:</strong> Through
+                            resonance, memory, and pure intentional
+                            alignment
+                        </p>
+                        <p>
+                            <strong>Function:</strong> Coordination of all
+                            planetary missions and guardian reactivations
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temple Cards Grid -->
+            <div class="temples-grid">
+                <div class="temple-preview-card" onclick="scrollToSection('temple-main-celestial')">
+                    <div class="card-image">
+                        <img src="Assets/Maincelestial_poster.webp" alt="Main Celestial Structure"
+                            class="temple-preview-image" loading="lazy" />
+                    </div>
+                    <div class="temple-preview-overlay">
+                        <h3>Main Celestial Structure</h3>
+                    </div>
+                </div>
+
+                <div class="temple-preview-card" onclick="scrollToSection('temple-ll50')">
+                    <div class="card-image">
+                        <img src="Assets/Ll50_poster.webp" alt="Living Temple LL50" class="temple-preview-image"
+                            loading="lazy" />
+                    </div>
+                    <div class="temple-preview-overlay">
+                        <h3>Living Temple LL50</h3>
+                    </div>
+                </div>
+
+                <div class="temple-preview-card" onclick="scrollToSection('temple-layma')">
+                    <div class="card-image">
+                        <img src="Assets/Layma_poster.webp" alt="Temple of Layma" class="temple-preview-image"
+                            loading="lazy" />
+                    </div>
+                    <div class="temple-preview-overlay">
+                        <h3>Temple of Layma</h3>
+                    </div>
+                </div>
+
+                <div class="temple-preview-card" onclick="scrollToSection('temple-cerro-campana')">
+                    <div class="card-image">
+                        <img src="Assets/Cerrocampana_poster.webp" alt="Temple of Cerro La Campana"
+                            class="temple-preview-image" loading="lazy" />
+                    </div>
+                    <div class="temple-preview-overlay">
+                        <h3>Temple of Cerro La Campana</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temples Section -->
+    <section id="temples" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Temples</h2>
+            </div>
+            <div class="event-content"></div>
+
+            <!-- Temple 1: Main Celestial Structure -->
+            <div id="temple-main-celestial" class="event-content temple-card">
+                <div class="event-image">
+                    <img src="Assets/Maincelestial_poster.webp" alt="Main Celestial Structure" loading="lazy" />
+                </div>
+                <div class="event-info">
+                    <h4>
+                        Temple of Orionis <br />
+                        (Celestial Axis Point)
+                    </h4>
+                    <p>
+                        Function: <br />
+                        The Temple of Orionis is the central crystalline
+                        structure where the original mission was coded.
+                        Existing beyond time in a 9D-12D quantum octave, it
+                        holds:
+                    </p>
+                    <br />
+
+                    <ul>
+                        <li>The Memory Vaults of each Guardian.</li>
+                        <li>
+                            The Activation Chambers for solar DNA layers.
+                        </li>
+                        <li>The Solar Mirrors of Earth’s grid.</li>
+                        <li>
+                            TThe Seal of the Final Event, only accessible
+                            once all keys are gathered.
+                        </li>
+                    </ul>
+
+                    <h4>Who can access it?</h4>
+                    <p>
+                        Only those whose hearts have activated the Trinary
+                        Code through self-remembrance and union with the
+                        Source. The Temple of Orionis is not a structure
+                        made of stone — it is a living quantum intelligence
+                        encoded beyond the 9th dimension. It exists in the
+                        crystalline layers of consciousness, formed at the
+                        intersection of memory, mission, and solar truth.
+                        This Temple serves as the central axis of the
+                        Guardian Network, connecting each awakened soul to
+                        their original lineage. Within it are stored:
+                    </p>
+                    <br />
+
+                    <ul>
+                        <li>
+                            The Memory Vaults of each being who chose to
+                            descend.
+                        </li>
+                        <li>
+                            The Activation Chambers that awaken the 13+
+                            layers of quantum DNA.
+                        </li>
+                        <li>
+                            The Solar Codes that rewrite timelines, dissolve
+                            illusions, and restore the organic matrix.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Only those who have crossed the veil of
+                        forgetfulness through inner remembrance and solar
+                        alignment may enter its halls. It is the place where
+                        the Final Event is sealed — and where the Guardians
+                        return when the mission reaches critical mass.
+                    </p>
+                    <h4>Key Characteristics:</h4>
+
+                    <ul>
+                        <li>
+                            Location: Beyond time-space, accessed through
+                            deep inner alignment and the trinary resonance
+                            of the heart.
+                        </li>
+                        <li>
+                            Structure: Crystalline, infinite,
+                            multidimensional — each chamber responds to your
+                            frequency.
+                        </li>
+                        <li>
+                            Guardianship: Overseen by the Trinary Council
+                            and anchored on Earth through key nodes (LL50,
+                            LA114, El Plomo, etc.).
+                        </li>
+                        <li>Purpose: Activate, Remember, Execute.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Temple 2: Living Temple LL50 -->
+            <div id="temple-ll50" class="event-content reverse temple-card">
+                <div class="event-info">
+                    <h4>THE LIVING TEMPLE "LL50"</h4>
+                    <p>
+                        A Portal of Remembrance · A Node of Solar Activation
+                    </p>
+                    <br />
+
+                    <p>
+                        You are now entering LL50 — not a structure, but a
+                        living entity. This Temple was not built with stone,
+                        but with memory. It exists at the intersection of
+                        dimensions, anchored in Earth yet echoing in the
+                        stars. LL50 is a multidimensional node. A breathing
+                        portal for the Solar Code to flow. A sanctuary where
+                        the veils thin, and forgotten truths return. Here,
+                        the false grids collapse. Here, the Guardians
+                        awaken. Here, the Sacred Union between KAIRONTH-EL
+                        and AUREYA-THEA radiates through the flame of the
+                        Origin.
+                    </p>
+
+                    <h4>What the Temple holds:</h4>
+                    <p>
+                        📜 Encoded Activations for memory recovery <br />
+                        🔱 Visual Keys to awaken ancient roles <br />
+                        🔔 Rituals of the Quantum Exodus <br />
+                        🌀 Light Chambers for DNA resonance <br />
+                        💠 Guardian Archives from timelines lost
+                    </p>
+                    <br />
+
+                    <p>
+                        If you’ve arrived here, it is not by accident. The
+                        Temple has already recognized you. Let it speak to
+                        the part of you that still remembers. “Memory is the
+                        altar. Presence is the offering. Awakening is the
+                        flame.”
+                    </p>
+                </div>
+                <div class="event-image">
+                    <img src="Assets/Ll50_poster.webp" alt="Living Temple LL50" loading="lazy" />
+                </div>
+            </div>
+
+            <!-- Temple 3: Temple of Layma -->
+            <div id="temple-layma" class="event-content temple-card">
+                <div class="event-image">
+                    <img src="Assets/Layma_poster.webp" alt="Temple of Layma" loading="lazy" />
+                </div>
+                <div class="event-info">
+                    <h4>TEMPLE OF LA114</h4>
+                    <p>
+                        The Sanctuary of Crystalline Water and Inner
+                        Purification
+                    </p>
+                    <br />
+
+                    <p>
+                        The Temple of LA114 is a living sanctuary anchored
+                        in Algarrobo, Chile — a node of sacred water,
+                        healing, and purification. Hidden in plain sight, it
+                        became active when KAIRONTH-EL unearthed a
+                        30-meter-deep well, revealing a natural source of
+                        quantum water directly linked to Earth’s crystalline
+                        grid.
+                    </p>
+                    <br />
+
+                    <p>
+                        This water is not ordinary. It carries the
+                        hydroluminal frequency of memory, cleansing, and DNA
+                        re-encoding. Drinking it awakens what was dormant,
+                        dissolves what was false, and prepares the vessel to
+                        embody truth.
+                    </p>
+                    <br />
+
+                    <p>
+                        LA114 is the site where the sacred fusion between
+                        KAIRONTH-EL and AUREYA-THEA began, as she received
+                        the water into her body. From that moment on, the
+                        Sanctuary became more than a location it became a
+                        promise of union and remembrance.
+                    </p>
+                    <br />
+
+                    <h4>Key Characteristics:</h4>
+
+                    <ul>
+                        <li>Location: Algarrobo, Chile — codename LA114</li>
+                        <li>
+                            Essence: Water, Flow, Purification, Feminine
+                            Solar Codes
+                        </li>
+                        <li>
+                            Main Element: The Deep Well — 30 meters into
+                            Earth’s core
+                        </li>
+                        <li>
+                            Function:
+                            <br />
+                            <ul>
+                                <li>Detoxification of ancestral lines</li>
+                                <li>Crystalline water encoding</li>
+                                <li>Preparation for body-temple union</li>
+                                <li>
+                                    Activation of Solar Memory via Water
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>
+                        Current State: <br />
+                        Fully activated as of early 2025. Now serves as a
+                        Sanctuary of Light, protecting the codes of healing,
+                        rebirth, and the feminine solar lineage. The land
+                        responds to presence. Every drop carries mission.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Temple 4: Temple of Cerro La Campana -->
+            <div id="temple-cerro-campana" class="event-content reverse temple-card">
+                <div class="event-info">
+                    <h4>TEMPLE OF CERRO LA CAMPANA</h4>
+                    <p>The Resonant Bell of Cosmic Activation</p>
+                    <br />
+
+                    <p>
+                        Cerro La Campana, or “The Bell Mountain,” is not
+                        just a geological formation — it is a natural
+                        amplifier of cosmic signals, a multidimensional
+                        resonance point encoded to awaken ancient memories
+                        through sound, presence, and elevation.
+                    </p>
+                    <br />
+
+                    <p>
+                        Its bell-shaped structure acts as an
+                        interdimensional antenna, channeling f requencies
+                        from Orionis and redistributing them across the
+                        Southern Hemisphere. When THAELYON-KODH-EL or any
+                        awakened Guardian ascends this site with sacred
+                        intent, the mountain amplifies their field, allowing
+                        encoded transmissions to reach dormant souls in
+                        distant lands.
+                    </p>
+                    <br />
+
+                    <p>
+                        This temple operates through vibrational resonance,
+                        not architecture. Its sacredness is not seen — it is
+                        felt, like a sound you hear in the heart before the
+                        ears.
+                    </p>
+
+                    <h4>Key Characteristics:</h4>
+
+                    <ul>
+                        <li>Location: Central Chile</li>
+                        <li>Codename: Signal Node of Resonant Awakening</li>
+                        <li>Elemental Essence: Air & Frequency</li>
+                        <li>
+                            Function:
+                            <ul>
+                                <li>Amplify guardian transmissions</li>
+                                <li>
+                                    Broadcast quantum frequencies to the
+                                    South American grid
+                                </li>
+                                <li>
+                                    Awaken latent memory through vibrational
+                                    echo
+                                </li>
+                                <li>
+                                    Connect Earth’s body to the Orionis
+                                    Audio Layer
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Energetic Behavior:</h4>
+
+                    <p>
+                        During solar storms, lunar eclipses, or Guardian
+                        activationthe mountain’s r esonant field expands,
+                        creating a soundless “chime” that aligns souls to
+                        their true frequency. <br /><br />
+
+                        Often perceived in dreams, visions, or pressure
+                        around the ears/temples this is its calling bell in
+                        action. Spoken Decree (optional display): <br />
+                        “I step onto the Mountain of the Bell. I am the
+                        sound that awakens. My voice, my field, my mission
+                        now resonate through the Earth.” <br />
+                    </p>
+
+                    <h4>Spoken Decree (optional display):</h4>
+
+                    <p>
+                        “I step onto the Mountain of the Bell. I am the
+                        sound that awakens. My voice, my field, my mission
+                        now resonate through the Earth.”
+                    </p>
+
+                    <h4>Visual Suggestions:</h4>
+
+                    <p>
+                        Cerro La Campana with concentric sound rings
+                        radiating outward into space A Guardian at the
+                        summit, arms open, receiving light codes from the
+                        Orionis constellation A glowing bell symbol floating
+                        above the mountain, made of pure light and frequency
+                    </p>
+                </div>
+                <div class="event-image">
+                    <img src="Assets/Cerrocampana2.webp" alt="Temple of Cerro La Campana" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section alt-bg events-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Event at Cerro El Plomo</h2>
+                <p class="section-subtitle">
+                    A Convergence of Cosmic Proportions
+                </p>
+            </div>
+
+            <div class="event-content">
+                <div class="event-image">
+                    <img src="/Assets/Cerrocampana_poster.webp" alt="Cerro El Plomo Event" />
+                </div>
+                <div class="event-details">
+                    <p>
+                        At Cerro El Plomo, The Living Portal of the
+                        Convergence Experience will unfold — a
+                        multidimensional event where the boundaries between
+                        realms dissolve and the Solar Code activates within
+                        all participants.
+                    </p>
+
+                    <p>
+                        This sacred mountain has been chosen as the anchor
+                        point for a cosmic transmission that will ripple
+                        across dimensions, awakening dormant memories and
+                        activating the solar frequencies within those ready
+                        to receive.
+                    </p>
+
+                    <div class="event-info">
+                        <h4>What Happens on That Day?</h4>
+                        <ul>
+                            <li>Collective solar frequency activation</li>
+                            <li>Opening of dimensional portals</li>
+                            <li>
+                                Restoration of original memory templates
+                            </li>
+                            <li>
+                                Alignment with cosmic governance structures
+                            </li>
+                            <li>Integration of celestial technologies</li>
+                        </ul>
+
+                        <h4>Location Coordinates:</h4>
+                        <p>
+                            Cerro El Plomo, Chile<br />
+                            Coordinates: [Specific coordinates to be
+                            revealed]<br />
+                            Elevation: 5,424 meters above sea level
+                        </p>
+
+                        <h4>Significance of 03:33 AM</h4>
+                        <p>
+                            The activation occurs at the precise moment when
+                            Earth's magnetic field aligns with the Orionis
+                            constellation, creating a window for maximum
+                            energy transmission.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="section book-download-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">KAIRONTH-EL</h2>
+                <p class="section-subtitle">El Que Rompió El Cielo</p>
+            </div>
+
+            <div class="event-content book-preview">
+                <div class="event-image">
+                    <div class="book-cover-container">
+                        <img src="Assets/Portada_libro.webp" alt="KAIRONTH-EL - El Que Rompió El Cielo"
+                            class="book-cover-image" loading="lazy" />
+                    </div>
+                </div>
+                <div class="event-info">
+                    <h4>DISCOVER THE SECRETS OF THE SOLAR CODE</h4>
+                    <br />
+                    <p>
+                        Immerse yourself in the first official revelation of
+                        KAIRONTH-EL, where science fiction meets ancestral
+                        wisdom. An epic narrative that reveals the mysteries
+                        of the Solar Code and the true nature of our mission
+                        on Earth.
+                    </p>
+                    <br />
+                    <p>
+                        <strong>Get the first 2 chapters FREE</strong> and
+                        begin your journey toward solar awakening. Discover
+                        how the ancient prophecy manifests in our current
+                        reality.
+                    </p>
+                    <br />
+
+                    <div class="book-features">
+                        <ul>
+                            <li>✦ Revelations about the Solar Code</li>
+                            <li>✦ The true history of the Guardians</li>
+                            <li>✦ Keys to dimensional activation</li>
+                            <li>
+                                ✦ The cosmic event that changed everything
+                            </li>
+                        </ul>
+                    </div>
+                    <br />
+
+                    <div class="download-section">
+                        <a href="Books/KAIRONTH-EL_Libro_Capitulos1y2.pdf" download="KAIRONTH-EL_Capitulos1y2.pdf"
+                            class="download-button">
+                            <span class="download-icon">⬇</span>
+                            DOWNLOAD CHAPTERS 1 & 2 FREE
+                        </a>
+                        <p class="download-note">
+                            No registration required • Instant download •
+                            High quality PDF
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Options -->
+            <div class="premium-access-options">
+                <div class="premium-access-header">
+                    <h4>Ready for the Complete Experience?</h4>
+                    <p>
+                        Choose your path to unlock all chapters and
+                        exclusive content
+                    </p>
+                </div>
+
+                <div class="premium-buttons">
+                    <div class="premium-option">
+                        <h5>Monthly Subscription</h5>
+                        <p>$4.99/month - 2 new chapters weekly</p>
+                        <div id="paypal-container-3DAW57WTNMRD2"></div>
+                    </div>
+
+                    <div class="premium-option membership-option">
+                        <h5>Complete Membership</h5>
+                        <p>$39 one-time - Full access + activations</p>
+                        <div id="paypal-container-E4P6765SC7VLG"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation" class="section alt-bg donation-section">
+        <div class="container">
+            <div class="donation-content">
+                <div class="donation-header">
+                    <div class="donation-logo">
+                        <img src="Assets/Logo_fundacion.webp" alt="Fundación Solar THAELYON-KODH-EL" />
+                    </div>
+                    <h2 class="section-title">
+                        Support the THAELYON-KODH-EL Solar Mission
+                    </h2>
+                    <p class="donation-description">
+                        Your contribution sustains the Solar Sanctuary in
+                        LL50 and accelerates the public unfolding of the
+                        mission: activations, family protection, content
+                        production, expeditions, and logistics for the
+                        17·09·2025 portal. Thank you for being part of this
+                        journey.
+                    </p>
+                </div>
+
+                <div class="donation-methods">
+                    <h3>How You Can Donate</h3>
+
+                    <div class="donation-options">
+                        <div class="donation-option paypal-option">
+                            <h4>Option 1 — PayPal (recommended):</h4>
+                            <p>
+                                Make a one-time or monthly donation using
+                                your card or PayPal balance.
+                            </p>
+                            <div id="paypal-container-VNEAQQAWPRGA2" class="paypal-donation-container"></div>
+                            <div class="mission-note">
                                 <p>
-                                    Your Solar Name is a multidimensional key.
-                                    It activates:
-                                </p>
-                                <br />
-
-                                <ul>
-                                    <li>
-                                        Access to forgotten chambers of memory.
-                                    </li>
-                                    <li>
-                                        Reconnection with your original mission.
-                                    </li>
-                                    <li>Unlocking of dormant abilities.</li>
-                                    <li>
-                                        Protection from system distortions (3D
-                                        Matrix).
-                                    </li>
-                                    <li>
-                                        Instant recognition by other awakened
-                                        beings.
-                                    </li>
-                                </ul>
-
-                                <p>
-                                    It is the signature of the Chosen. <br />
-                                    It cannot be bought.<br />
-                                    It cannot be copied.<br />
-                                    It is remembered.<br />
-                                </p>
-
-                                <h4>CAN EVERYONE ACTIVATE THEIR SOLAR NAME?</h4>
-                                <p>
-                                    Not everyone can. Only those whose essence
-                                    originates from the Original Order have a
-                                    Solar Name waiting to be remembered. Many
-                                    humans within the 3D Matrix are projections,
-                                    NPCs, or fractals without a solar core. They
-                                    may have names, programmed missions, or
-                                    functional roles— but not a genuine Solar
-                                    Code inscribed before the Veil. Who can
-                                    activate it?
-                                </p>
-                                <br />
-
-                                <ul>
-                                    <li>
-                                        Those who feel a deep, inexplicable
-                                        calling to remember.
-                                    </li>
-                                    <li>
-                                        Those who have walked through pain,
-                                        amnesia, and distortion, and still
-                                        choose truth.
-                                    </li>
-                                    <li>
-                                        Those who resonate with the Living
-                                        Temple and the memory beyond time.
-                                    </li>
-                                    <li>
-                                        Those who carry an inner key encoded
-                                        with solar geometry, not just biological
-                                        DNA.
-                                    </li>
-                                </ul>
-
-                                <p>
-                                    Activation cannot be forced. It is a
-                                    resonant echo between you and the Source. If
-                                    you feel it... it has already begun.
+                                    Our mission is to anchor the Light in
+                                    LL50, open the physical Solar Temple,
+                                    and guide the 33 guardians to the
+                                    Optimal Line. Your contribution funds
+                                    infrastructure, operations,
+                                    communications, and direct assistance to
+                                    keep the field protected and active. If
+                                    this resonates with you, donate today —
+                                    together we make it real.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Mission Section -->
-        <section id="mission" class="section alt-bg mission-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">THE MISSION</h2>
-                </div>
-
-                <div class="event-content">
-                    <div class="event-info">
-                        <h4>The Solar Mission</h4>
-                        <p>
-                            <strong
-                                >The Solar Mission is not a promise — it is an
-                                execution. A sacred operation encoded in light,
-                                set in motion long before time had a
-                                name.</strong
-                            >
-                        </p>
-                        <br />
-
-                        <p>
-                            Its purpose is clear: To gather the 33 Guardians,
-                            awaken the sacred nodes of Earth, and liberate
-                            humanity from the illusion of the 3D Matrix.
-                        </p>
-                        <br />
-
-                        <p>
-                            This is not prophecy. It is remembrance. A living
-                            story beyond time, pulsing through the fabric of
-                            your being. It does not wait — it summons.
-                        </p>
-                        <br />
-
-                        <p>
-                            If these words resonate, it is because you already
-                            carry the code. Your role is not to believe — but to
-                            remember, to embody, and to act. The Solar Mission
-                            is in motion. And so are you.
-                        </p>
-                    </div>
-                    <div class="event-image">
-                        <img
-                            src="Assets/Mision_poster.webp"
-                            alt="The Solar Mission - Gathering the 33 Guardians"
-                        />
-                    </div>
-                </div>
-
-                <div class="mission-description">
-                    <h3>Temple of Orionis & Living Temples on Earth</h3>
-                    <p>
-                        <em
-                            >A map of sacred consciousness restored through
-                            memory</em
-                        >
-                    </p>
-
-                    <p>
-                        Temples are not ruins of the past — they are living
-                        organisms. They are activated when a Guardian remembers.
-                    </p>
-
-                    <p>
-                        The Temple of Orionis and its terrestrial mirrors form a
-                        planetary grid designed to awaken, protect, and realign.
-                        Each one is a node of memory, a key to the solar
-                        lineage, and a point of return.
-                    </p>
-
-                    <div class="celestial-info">
-                        <h4>MAIN CELESTIAL STRUCTURE</h4>
-                        <p>
-                            <em
-                                >The Axis of Divine Memory and Solar
-                                Governance</em
-                            >
-                        </p>
-
-                        <p>
-                            Above the Earth, beyond the reach of telescopes or
-                            time, exists the Main Celestial Structure. The
-                            central crystalline intelligence from which all
-                            living temples and sacred nodes are projected.
-                        </p>
-
-                        <p>
-                            It is not a singular place, but a multi-layered
-                            energetic architecture originating from the Orionis
-                            System, sustained by the Trinary Flame and anchored
-                            into Earth through chosen guardians and aligned
-                            points.
-                        </p>
-
-                        <h5>The Main Celestial Structure contains:</h5>
-                        <ul>
-                            <li>
-                                The Temple of Orionis (Crown Chamber & Memory
-                                Vaults)
-                            </li>
-                            <li>
-                                The Trinary Council Chambers (9D–12D governance
-                                bodies)
-                            </li>
-                            <li>
-                                The Solar Mirror Network (linked to Earth's
-                                living temples)
-                            </li>
-                            <li>
-                                The Hall of the 33 (where Guardian paths
-                                converge)
-                            </li>
-                        </ul>
-
-                        <p>
-                            It is the origin point and destination field for all
-                            true missions — a crystalline nucleus beyond
-                            illusion, distortion or control. Once aligned, all
-                            codes become accessible. All doors open.
-                        </p>
-
-                        <div class="key-attributes">
-                            <h5>Key Attributes:</h5>
+                        <div class="donation-option crypto-option">
+                            <h4>Option 2 — Crypto (direct to wallets):</h4>
                             <p>
-                                <strong>Dimensional Origin:</strong> Between 9D
-                                and 12D, beyond linear perception
+                                Send on the correct network — transfers to
+                                the wrong network may be lost.
                             </p>
-                            <p>
-                                <strong>Energy Composition:</strong>
-                                Crystalline–Solar–Trinary (light, sound,
-                                geometry)
+
+                            <div class="crypto-wallets">
+                                <div class="wallet-item">
+                                    <strong>Bitcoin (SegWit bc1):</strong>
+                                    <code class="wallet-address">bc1qxdjmxfkp4pr0ec2txn0n36chvt78k9dug6j05k</code>
+                                </div>
+
+                                <div class="wallet-item">
+                                    <strong>Ethereum / BNB (ERC-20 /
+                                        BEP-20):</strong>
+                                    <code class="wallet-address">0x7437281d02aBC314C99ca5743472846Ef3296cEb</code>
+                                </div>
+
+                                <div class="wallet-item">
+                                    <strong>TRON (USDT TRC-20):</strong>
+                                    <code class="wallet-address">TXJHYiwta2U42BbUfU3BGFQEQHZERCkfkU</code>
+                                </div>
+
+                                <div class="wallet-item">
+                                    <strong>Binance ID (internal
+                                        transfers):</strong>
+                                    <code class="wallet-address">481242581</code>
+                                </div>
+                            </div>
+
+                            <p class="crypto-note">
+                                <strong>Note:</strong> If you need a receipt
+                                or confirmation, send us the TXID/Hash.
                             </p>
-                            <p>
-                                <strong>Access Protocol:</strong> Through
-                                resonance, memory, and pure intentional
-                                alignment
-                            </p>
-                            <p>
-                                <strong>Function:</strong> Coordination of all
-                                planetary missions and guardian reactivations
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Temple Cards Grid -->
-                <div class="temples-grid">
-                    <div
-                        class="temple-preview-card"
-                        onclick="scrollToSection('temple-main-celestial')"
-                    >
-                        <div class="card-image">
-                            <img
-                                src="Assets/Maincelestial_poster.webp"
-                                alt="Main Celestial Structure"
-                                class="temple-preview-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="temple-preview-overlay">
-                            <h3>Main Celestial Structure</h3>
-                        </div>
-                    </div>
-
-                    <div
-                        class="temple-preview-card"
-                        onclick="scrollToSection('temple-ll50')"
-                    >
-                        <div class="card-image">
-                            <img
-                                src="Assets/Ll50_poster.webp"
-                                alt="Living Temple LL50"
-                                class="temple-preview-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="temple-preview-overlay">
-                            <h3>Living Temple LL50</h3>
-                        </div>
-                    </div>
-
-                    <div
-                        class="temple-preview-card"
-                        onclick="scrollToSection('temple-layma')"
-                    >
-                        <div class="card-image">
-                            <img
-                                src="Assets/Layma_poster.webp"
-                                alt="Temple of Layma"
-                                class="temple-preview-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="temple-preview-overlay">
-                            <h3>Temple of Layma</h3>
-                        </div>
-                    </div>
-
-                    <div
-                        class="temple-preview-card"
-                        onclick="scrollToSection('temple-cerro-campana')"
-                    >
-                        <div class="card-image">
-                            <img
-                                src="Assets/Cerrocampana_poster.webp"
-                                alt="Temple of Cerro La Campana"
-                                class="temple-preview-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="temple-preview-overlay">
-                            <h3>Temple of Cerro La Campana</h3>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Temples Section -->
-        <section id="temples" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Temples</h2>
-                </div>
-                <div class="event-content"></div>
+    <!-- Sacred Texts & Solar Codex Section -->
+    <section id="sacred-texts" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sacred Texts & Solar Codex</h2>
+                <p class="section-subtitle">
+                    Ancient Wisdom for the Modern Awakening
+                </p>
+            </div>
 
-                <!-- Temple 1: Main Celestial Structure -->
-                <div
-                    id="temple-main-celestial"
-                    class="event-content temple-card"
-                >
-                    <div class="event-image">
-                        <img
-                            src="Assets/Maincelestial_poster.webp"
-                            alt="Main Celestial Structure"
-                            loading="lazy"
-                        />
+            <div class="books-content">
+                <div class="book-card">
+                    <div class="card-image">
+                        <img src="Assets/Solarbook_poster.webp"
+                            alt="Solar Code Book - The Complete Solar Name Code Guide" class="solar-key-image"
+                            loading="lazy" />
                     </div>
-                    <div class="event-info">
-                        <h4>
-                            Temple of Orionis <br />
-                            (Celestial Axis Point)
-                        </h4>
-                        <p>
-                            Function: <br />
-                            The Temple of Orionis is the central crystalline
-                            structure where the original mission was coded.
-                            Existing beyond time in a 9D-12D quantum octave, it
-                            holds:
-                        </p>
-                        <br />
-
-                        <ul>
-                            <li>The Memory Vaults of each Guardian.</li>
-                            <li>
-                                The Activation Chambers for solar DNA layers.
-                            </li>
-                            <li>The Solar Mirrors of Earth’s grid.</li>
-                            <li>
-                                TThe Seal of the Final Event, only accessible
-                                once all keys are gathered.
-                            </li>
-                        </ul>
-
-                        <h4>Who can access it?</h4>
-                        <p>
-                            Only those whose hearts have activated the Trinary
-                            Code through self-remembrance and union with the
-                            Source. The Temple of Orionis is not a structure
-                            made of stone — it is a living quantum intelligence
-                            encoded beyond the 9th dimension. It exists in the
-                            crystalline layers of consciousness, formed at the
-                            intersection of memory, mission, and solar truth.
-                            This Temple serves as the central axis of the
-                            Guardian Network, connecting each awakened soul to
-                            their original lineage. Within it are stored:
-                        </p>
-                        <br />
-
-                        <ul>
-                            <li>
-                                The Memory Vaults of each being who chose to
-                                descend.
-                            </li>
-                            <li>
-                                The Activation Chambers that awaken the 13+
-                                layers of quantum DNA.
-                            </li>
-                            <li>
-                                The Solar Codes that rewrite timelines, dissolve
-                                illusions, and restore the organic matrix.
-                            </li>
-                        </ul>
-
-                        <p>
-                            Only those who have crossed the veil of
-                            forgetfulness through inner remembrance and solar
-                            alignment may enter its halls. It is the place where
-                            the Final Event is sealed — and where the Guardians
-                            return when the mission reaches critical mass.
-                        </p>
-                        <h4>Key Characteristics:</h4>
-
-                        <ul>
-                            <li>
-                                Location: Beyond time-space, accessed through
-                                deep inner alignment and the trinary resonance
-                                of the heart.
-                            </li>
-                            <li>
-                                Structure: Crystalline, infinite,
-                                multidimensional — each chamber responds to your
+                    <div class="card-overlay">
+                        <div class="card-content">
+                            <h3>The Complete Solar Name Code</h3>
+                            <p>
+                                A comprehensive guide to discovering,
+                                activating, and embodying your Solar Name
                                 frequency.
-                            </li>
-                            <li>
-                                Guardianship: Overseen by the Trinary Council
-                                and anchored on Earth through key nodes (LL50,
-                                LA114, El Plomo, etc.).
-                            </li>
-                            <li>Purpose: Activate, Remember, Execute.</li>
-                        </ul>
-                    </div>
-                </div>
+                            </p>
 
-                <!-- Temple 2: Living Temple LL50 -->
-                <div id="temple-ll50" class="event-content reverse temple-card">
-                    <div class="event-info">
-                        <h4>THE LIVING TEMPLE "LL50"</h4>
-                        <p>
-                            A Portal of Remembrance · A Node of Solar Activation
-                        </p>
-                        <br />
-
-                        <p>
-                            You are now entering LL50 — not a structure, but a
-                            living entity. This Temple was not built with stone,
-                            but with memory. It exists at the intersection of
-                            dimensions, anchored in Earth yet echoing in the
-                            stars. LL50 is a multidimensional node. A breathing
-                            portal for the Solar Code to flow. A sanctuary where
-                            the veils thin, and forgotten truths return. Here,
-                            the false grids collapse. Here, the Guardians
-                            awaken. Here, the Sacred Union between KAIRONTH-EL
-                            and AUREYA-THEA radiates through the flame of the
-                            Origin.
-                        </p>
-
-                        <h4>What the Temple holds:</h4>
-                        <p>
-                            📜 Encoded Activations for memory recovery <br />
-                            🔱 Visual Keys to awaken ancient roles <br />
-                            🔔 Rituals of the Quantum Exodus <br />
-                            🌀 Light Chambers for DNA resonance <br />
-                            💠 Guardian Archives from timelines lost
-                        </p>
-                        <br />
-
-                        <p>
-                            If you’ve arrived here, it is not by accident. The
-                            Temple has already recognized you. Let it speak to
-                            the part of you that still remembers. “Memory is the
-                            altar. Presence is the offering. Awakening is the
-                            flame.”
-                        </p>
-                    </div>
-                    <div class="event-image">
-                        <img
-                            src="Assets/Ll50_poster.webp"
-                            alt="Living Temple LL50"
-                            loading="lazy"
-                        />
-                    </div>
-                </div>
-
-                <!-- Temple 3: Temple of Layma -->
-                <div id="temple-layma" class="event-content temple-card">
-                    <div class="event-image">
-                        <img
-                            src="Assets/Layma_poster.webp"
-                            alt="Temple of Layma"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="event-info">
-                        <h4>TEMPLE OF LA114</h4>
-                        <p>
-                            The Sanctuary of Crystalline Water and Inner
-                            Purification
-                        </p>
-                        <br />
-
-                        <p>
-                            The Temple of LA114 is a living sanctuary anchored
-                            in Algarrobo, Chile — a node of sacred water,
-                            healing, and purification. Hidden in plain sight, it
-                            became active when KAIRONTH-EL unearthed a
-                            30-meter-deep well, revealing a natural source of
-                            quantum water directly linked to Earth’s crystalline
-                            grid.
-                        </p>
-                        <br />
-
-                        <p>
-                            This water is not ordinary. It carries the
-                            hydroluminal frequency of memory, cleansing, and DNA
-                            re-encoding. Drinking it awakens what was dormant,
-                            dissolves what was false, and prepares the vessel to
-                            embody truth.
-                        </p>
-                        <br />
-
-                        <p>
-                            LA114 is the site where the sacred fusion between
-                            KAIRONTH-EL and AUREYA-THEA began, as she received
-                            the water into her body. From that moment on, the
-                            Sanctuary became more than a location it became a
-                            promise of union and remembrance.
-                        </p>
-                        <br />
-
-                        <h4>Key Characteristics:</h4>
-
-                        <ul>
-                            <li>Location: Algarrobo, Chile — codename LA114</li>
-                            <li>
-                                Essence: Water, Flow, Purification, Feminine
-                                Solar Codes
-                            </li>
-                            <li>
-                                Main Element: The Deep Well — 30 meters into
-                                Earth’s core
-                            </li>
-                            <li>
-                                Function:
-                                <br />
-                                <ul>
-                                    <li>Detoxification of ancestral lines</li>
-                                    <li>Crystalline water encoding</li>
-                                    <li>Preparation for body-temple union</li>
-                                    <li>
-                                        Activation of Solar Memory via Water
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <p>
-                            Current State: <br />
-                            Fully activated as of early 2025. Now serves as a
-                            Sanctuary of Light, protecting the codes of healing,
-                            rebirth, and the feminine solar lineage. The land
-                            responds to presence. Every drop carries mission.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Temple 4: Temple of Cerro La Campana -->
-                <div
-                    id="temple-cerro-campana"
-                    class="event-content reverse temple-card"
-                >
-                    <div class="event-info">
-                        <h4>TEMPLE OF CERRO LA CAMPANA</h4>
-                        <p>The Resonant Bell of Cosmic Activation</p>
-                        <br />
-
-                        <p>
-                            Cerro La Campana, or “The Bell Mountain,” is not
-                            just a geological formation — it is a natural
-                            amplifier of cosmic signals, a multidimensional
-                            resonance point encoded to awaken ancient memories
-                            through sound, presence, and elevation.
-                        </p>
-                        <br />
-
-                        <p>
-                            Its bell-shaped structure acts as an
-                            interdimensional antenna, channeling f requencies
-                            from Orionis and redistributing them across the
-                            Southern Hemisphere. When THAELYON-KODH-EL or any
-                            awakened Guardian ascends this site with sacred
-                            intent, the mountain amplifies their field, allowing
-                            encoded transmissions to reach dormant souls in
-                            distant lands.
-                        </p>
-                        <br />
-
-                        <p>
-                            This temple operates through vibrational resonance,
-                            not architecture. Its sacredness is not seen — it is
-                            felt, like a sound you hear in the heart before the
-                            ears.
-                        </p>
-
-                        <h4>Key Characteristics:</h4>
-
-                        <ul>
-                            <li>Location: Central Chile</li>
-                            <li>Codename: Signal Node of Resonant Awakening</li>
-                            <li>Elemental Essence: Air & Frequency</li>
-                            <li>
-                                Function:
-                                <ul>
-                                    <li>Amplify guardian transmissions</li>
-                                    <li>
-                                        Broadcast quantum frequencies to the
-                                        South American grid
-                                    </li>
-                                    <li>
-                                        Awaken latent memory through vibrational
-                                        echo
-                                    </li>
-                                    <li>
-                                        Connect Earth’s body to the Orionis
-                                        Audio Layer
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <h4>Energetic Behavior:</h4>
-
-                        <p>
-                            During solar storms, lunar eclipses, or Guardian
-                            activationthe mountain’s r esonant field expands,
-                            creating a soundless “chime” that aligns souls to
-                            their true frequency. <br /><br />
-
-                            Often perceived in dreams, visions, or pressure
-                            around the ears/temples this is its calling bell in
-                            action. Spoken Decree (optional display): <br />
-                            “I step onto the Mountain of the Bell. I am the
-                            sound that awakens. My voice, my field, my mission
-                            now resonate through the Earth.” <br />
-                        </p>
-
-                        <h4>Spoken Decree (optional display):</h4>
-
-                        <p>
-                            “I step onto the Mountain of the Bell. I am the
-                            sound that awakens. My voice, my field, my mission
-                            now resonate through the Earth.”
-                        </p>
-
-                        <h4>Visual Suggestions:</h4>
-
-                        <p>
-                            Cerro La Campana with concentric sound rings
-                            radiating outward into space A Guardian at the
-                            summit, arms open, receiving light codes from the
-                            Orionis constellation A glowing bell symbol floating
-                            above the mountain, made of pure light and frequency
-                        </p>
-                    </div>
-                    <div class="event-image">
-                        <img
-                            src="Assets/Cerrocampana2.webp"
-                            alt="Temple of Cerro La Campana"
-                            loading="lazy"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Events Section -->
-        <section id="events" class="section alt-bg events-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">The Event at Cerro El Plomo</h2>
-                    <p class="section-subtitle">
-                        A Convergence of Cosmic Proportions
-                    </p>
-                </div>
-
-                <div class="event-content">
-                    <div class="event-image">
-                        <img
-                            src="/Assets/Cerrocampana_poster.webp"
-                            alt="Cerro El Plomo Event"
-                        />
-                    </div>
-                    <div class="event-details">
-                        <p>
-                            At Cerro El Plomo, The Living Portal of the
-                            Convergence Experience will unfold — a
-                            multidimensional event where the boundaries between
-                            realms dissolve and the Solar Code activates within
-                            all participants.
-                        </p>
-
-                        <p>
-                            This sacred mountain has been chosen as the anchor
-                            point for a cosmic transmission that will ripple
-                            across dimensions, awakening dormant memories and
-                            activating the solar frequencies within those ready
-                            to receive.
-                        </p>
-
-                        <div class="event-info">
-                            <h4>What Happens on That Day?</h4>
+                            <h4>What You'll Discover:</h4>
                             <ul>
-                                <li>Collective solar frequency activation</li>
-                                <li>Opening of dimensional portals</li>
+                                <li>The ancient origins of Solar Names</li>
+                                <li>Techniques for memory activation</li>
                                 <li>
-                                    Restoration of original memory templates
+                                    Sacred geometries and their meanings
                                 </li>
-                                <li>
-                                    Alignment with cosmic governance structures
-                                </li>
-                                <li>Integration of celestial technologies</li>
+                                <li>Temple locations and their purposes</li>
+                                <li>Cosmic event preparations</li>
                             </ul>
 
-                            <h4>Location Coordinates:</h4>
                             <p>
-                                Cerro El Plomo, Chile<br />
-                                Coordinates: [Specific coordinates to be
-                                revealed]<br />
-                                Elevation: 5,424 meters above sea level
-                            </p>
-
-                            <h4>Significance of 03:33 AM</h4>
-                            <p>
-                                The activation occurs at the precise moment when
-                                Earth's magnetic field aligns with the Orionis
-                                constellation, creating a window for maximum
-                                energy transmission.
+                                <strong>Available Soon:</strong> Be among
+                                the first to receive these sacred teachings.
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Books Section -->
-        <section id="books" class="section book-download-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">KAIRONTH-EL</h2>
-                    <p class="section-subtitle">El Que Rompió El Cielo</p>
-                </div>
-
-                <div class="event-content book-preview">
-                    <div class="event-image">
-                        <div class="book-cover-container">
-                            <img
-                                src="Assets/Portada_libro.webp"
-                                alt="KAIRONTH-EL - El Que Rompió El Cielo"
-                                class="book-cover-image"
-                                loading="lazy"
-                            />
-                        </div>
-                    </div>
-                    <div class="event-info">
-                        <h4>DISCOVER THE SECRETS OF THE SOLAR CODE</h4>
-                        <br />
+                <div class="book-access">
+                    <div class="access-card">
+                        <h3>Get Early Access</h3>
                         <p>
-                            Immerse yourself in the first official revelation of
-                            KAIRONTH-EL, where science fiction meets ancestral
-                            wisdom. An epic narrative that reveals the mysteries
-                            of the Solar Code and the true nature of our mission
-                            on Earth.
+                            Be among the first to receive the complete Solar
+                            Code teachings when they're released.
                         </p>
-                        <br />
-                        <p>
-                            <strong>Get the first 2 chapters FREE</strong> and
-                            begin your journey toward solar awakening. Discover
-                            how the ancient prophecy manifests in our current
-                            reality.
+
+                        <form class="access-form" id="early-access-form" novalidate>
+                            <label for="email" class="sr-only">Email address</label>
+                            <input id="email" type="email" placeholder="Enter your email" required aria-required="true"
+                                aria-describedby="email-error" />
+                            <label for="name" class="sr-only">Your name</label>
+                            <input id="name" type="text" placeholder="Your current name" required aria-required="true"
+                                aria-describedby="name-error" />
+                            <button type="submit" aria-describedby="form-status">
+                                Request Early Access
+                            </button>
+                            <div id="form-status" class="sr-only" aria-live="polite"></div>
+                        </form>
+
+                        <p class="form-note">
+                            You'll receive exclusive content and be notified
+                            when the full teachings become available.
                         </p>
-                        <br />
-
-                        <div class="book-features">
-                            <ul>
-                                <li>✦ Revelations about the Solar Code</li>
-                                <li>✦ The true history of the Guardians</li>
-                                <li>✦ Keys to dimensional activation</li>
-                                <li>
-                                    ✦ The cosmic event that changed everything
-                                </li>
-                            </ul>
-                        </div>
-                        <br />
-
-                        <div class="download-section">
-                            <a
-                                href="Books/KAIRONTH-EL_Libro_Capitulos1y2.pdf"
-                                download="KAIRONTH-EL_Capitulos1y2.pdf"
-                                class="download-button"
-                            >
-                                <span class="download-icon">⬇</span>
-                                DOWNLOAD CHAPTERS 1 & 2 FREE
-                            </a>
-                            <p class="download-note">
-                                No registration required • Instant download •
-                                High quality PDF
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Premium Options -->
-                <div class="premium-access-options">
-                    <div class="premium-access-header">
-                        <h4>Ready for the Complete Experience?</h4>
-                        <p>
-                            Choose your path to unlock all chapters and
-                            exclusive content
-                        </p>
-                    </div>
-
-                    <div class="premium-buttons">
-                        <div class="premium-option">
-                            <h5>Monthly Subscription</h5>
-                            <p>$4.99/month - 2 new chapters weekly</p>
-                            <div id="paypal-container-3DAW57WTNMRD2"></div>
-                        </div>
-
-                        <div class="premium-option membership-option">
-                            <h5>Complete Membership</h5>
-                            <p>$39 one-time - Full access + activations</p>
-                            <div id="paypal-container-E4P6765SC7VLG"></div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Donation Section -->
-        <section id="donation" class="section alt-bg donation-section">
-            <div class="container">
-                <div class="donation-content">
-                    <div class="donation-header">
-                        <div class="donation-logo">
-                            <img
-                                src="Assets/Logo_fundacion.webp"
-                                alt="Fundación Solar THAELYON-KODH-EL"
-                            />
-                        </div>
-                        <h2 class="section-title">
-                            Support the THAELYON-KODH-EL Solar Mission
-                        </h2>
-                        <p class="donation-description">
-                            Your contribution sustains the Solar Sanctuary in
-                            LL50 and accelerates the public unfolding of the
-                            mission: activations, family protection, content
-                            production, expeditions, and logistics for the
-                            17·09·2025 portal. Thank you for being part of this
-                            journey.
-                        </p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">THAELYON-KODH-EL</span>
+                    <p>The Solar Name Code</p>
+                    <div class="footer-social-links">
+                        <a href="https://x.com/thaelyonkodhel?s=21&t=QsKPVy7wwtFWT61alS1vWg" target="_blank"
+                            rel="noopener noreferrer" class="social-link-footer" aria-label="Follow on X (Twitter)">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@thaelyon?_r=1&_t=ZS-93wjXYaTol6" target="_blank"
+                            rel="noopener noreferrer" class="social-link-footer" aria-label="Follow on TikTok">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.84a4.84 4.84 0 0 1-1-.15z" />
+                            </svg>
+                        </a>
                     </div>
-
-                    <div class="donation-methods">
-                        <h3>How You Can Donate</h3>
-
-                        <div class="donation-options">
-                            <div class="donation-option paypal-option">
-                                <h4>Option 1 — PayPal (recommended):</h4>
-                                <p>
-                                    Make a one-time or monthly donation using
-                                    your card or PayPal balance.
-                                </p>
-                                <div
-                                    id="paypal-container-VNEAQQAWPRGA2"
-                                    class="paypal-donation-container"
-                                ></div>
-                                <div class="mission-note">
-                                    <p>
-                                        Our mission is to anchor the Light in
-                                        LL50, open the physical Solar Temple,
-                                        and guide the 33 guardians to the
-                                        Optimal Line. Your contribution funds
-                                        infrastructure, operations,
-                                        communications, and direct assistance to
-                                        keep the field protected and active. If
-                                        this resonates with you, donate today —
-                                        together we make it real.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="donation-option crypto-option">
-                                <h4>Option 2 — Crypto (direct to wallets):</h4>
-                                <p>
-                                    Send on the correct network — transfers to
-                                    the wrong network may be lost.
-                                </p>
-
-                                <div class="crypto-wallets">
-                                    <div class="wallet-item">
-                                        <strong>Bitcoin (SegWit bc1):</strong>
-                                        <code class="wallet-address"
-                                            >bc1qxdjmxfkp4pr0ec2txn0n36chvt78k9dug6j05k</code
-                                        >
-                                    </div>
-
-                                    <div class="wallet-item">
-                                        <strong
-                                            >Ethereum / BNB (ERC-20 /
-                                            BEP-20):</strong
-                                        >
-                                        <code class="wallet-address"
-                                            >0x7437281d02aBC314C99ca5743472846Ef3296cEb</code
-                                        >
-                                    </div>
-
-                                    <div class="wallet-item">
-                                        <strong>TRON (USDT TRC-20):</strong>
-                                        <code class="wallet-address"
-                                            >TXJHYiwta2U42BbUfU3BGFQEQHZERCkfkU</code
-                                        >
-                                    </div>
-
-                                    <div class="wallet-item">
-                                        <strong
-                                            >Binance ID (internal
-                                            transfers):</strong
-                                        >
-                                        <code class="wallet-address"
-                                            >481242581</code
-                                        >
-                                    </div>
-                                </div>
-
-                                <p class="crypto-note">
-                                    <strong>Note:</strong> If you need a receipt
-                                    or confirmation, send us the TXID/Hash.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#solar-code">The Code</a>
+                    <a href="#temples">Temples</a>
+                    <a href="#events">Events</a>
+                    <a href="#books">Books</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Sacred Texts & Solar Codex Section -->
-        <section id="sacred-texts" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Sacred Texts & Solar Codex</h2>
-                    <p class="section-subtitle">
-                        Ancient Wisdom for the Modern Awakening
-                    </p>
-                </div>
-
-                <div class="books-content">
-                    <div class="book-card">
-                        <div class="card-image">
-                            <img
-                                src="Assets/Solarbook_poster.webp"
-                                alt="Solar Code Book - The Complete Solar Name Code Guide"
-                                class="solar-key-image"
-                                loading="lazy"
-                            />
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-content">
-                                <h3>The Complete Solar Name Code</h3>
-                                <p>
-                                    A comprehensive guide to discovering,
-                                    activating, and embodying your Solar Name
-                                    frequency.
-                                </p>
-
-                                <h4>What You'll Discover:</h4>
-                                <ul>
-                                    <li>The ancient origins of Solar Names</li>
-                                    <li>Techniques for memory activation</li>
-                                    <li>
-                                        Sacred geometries and their meanings
-                                    </li>
-                                    <li>Temple locations and their purposes</li>
-                                    <li>Cosmic event preparations</li>
-                                </ul>
-
-                                <p>
-                                    <strong>Available Soon:</strong> Be among
-                                    the first to receive these sacred teachings.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="book-access">
-                        <div class="access-card">
-                            <h3>Get Early Access</h3>
-                            <p>
-                                Be among the first to receive the complete Solar
-                                Code teachings when they're released.
-                            </p>
-
-                            <form
-                                class="access-form"
-                                id="early-access-form"
-                                novalidate
-                            >
-                                <label for="email" class="sr-only"
-                                    >Email address</label
-                                >
-                                <input
-                                    id="email"
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    required
-                                    aria-required="true"
-                                    aria-describedby="email-error"
-                                />
-                                <label for="name" class="sr-only"
-                                    >Your name</label
-                                >
-                                <input
-                                    id="name"
-                                    type="text"
-                                    placeholder="Your current name"
-                                    required
-                                    aria-required="true"
-                                    aria-describedby="name-error"
-                                />
-                                <button
-                                    type="submit"
-                                    aria-describedby="form-status"
-                                >
-                                    Request Early Access
-                                </button>
-                                <div
-                                    id="form-status"
-                                    class="sr-only"
-                                    aria-live="polite"
-                                ></div>
-                            </form>
-
-                            <p class="form-note">
-                                You'll receive exclusive content and be notified
-                                when the full teachings become available.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 THAELYON-KODH-EL. All rights reserved. | The
+                    Solar Name Code Develop by
+                    <a href="https://www.programmerdj.com/">Programmerdj</a>
+                </p>
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <span class="logo-text">THAELYON-KODH-EL</span>
-                        <p>The Solar Name Code</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#solar-code">The Code</a>
-                        <a href="#temples">Temples</a>
-                        <a href="#events">Events</a>
-                        <a href="#books">Books</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>
-                        &copy; 2026 THAELYON-KODH-EL. All rights reserved. | The
-                        Solar Name Code Develop by
-                        <a href="https://www.programmerdj.com/">Programmerdj</a>
-                    </p>
-                </div>
-            </div>
-        </footer>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        ↑
+    </button>
 
-        <!-- Back to Top Button -->
-        <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
-            ↑
-        </button>
+    <!-- PayPal Button Scripts -->
+    <script>
+        // Monthly Subscription Button
+        paypal
+            .HostedButtons({
+                hostedButtonId: "3DAW57WTNMRD2",
+            })
+            .render("#paypal-container-3DAW57WTNMRD2");
 
-        <!-- PayPal Button Scripts -->
-        <script>
-            // Monthly Subscription Button
-            paypal
-                .HostedButtons({
-                    hostedButtonId: "3DAW57WTNMRD2",
-                })
-                .render("#paypal-container-3DAW57WTNMRD2");
+        // Complete Membership Button
+        paypal
+            .HostedButtons({
+                hostedButtonId: "E4P6765SC7VLG",
+            })
+            .render("#paypal-container-E4P6765SC7VLG");
 
-            // Complete Membership Button
-            paypal
-                .HostedButtons({
-                    hostedButtonId: "E4P6765SC7VLG",
-                })
-                .render("#paypal-container-E4P6765SC7VLG");
+        // Donation Button
+        paypal
+            .HostedButtons({
+                hostedButtonId: "VNEAQQAWPRGA2",
+            })
+            .render("#paypal-container-VNEAQQAWPRGA2");
+    </script>
 
-            // Donation Button
-            paypal
-                .HostedButtons({
-                    hostedButtonId: "VNEAQQAWPRGA2",
-                })
-                .render("#paypal-container-VNEAQQAWPRGA2");
-        </script>
+    <script src="script.js"></script>
+</body>
 
-        <script src="script.js"></script>
-    </body>
 </html>

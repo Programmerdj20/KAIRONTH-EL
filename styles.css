@@ -193,8 +193,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-200px, -200px); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-200px, -200px);
+    }
 }
 
 /* Hero Content Grid — image left, narrative right */
@@ -211,8 +216,8 @@ body {
 /* Hero Image — normal flow, no sticky */
 .hero-image-main {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 
 .portrait-frame {
@@ -223,12 +228,10 @@ body {
     border: 2px solid rgba(244, 208, 63, 0.6);
     border-radius: 18px;
     padding: 12px;
-    background: linear-gradient(
-        145deg,
-        rgba(244, 208, 63, 0.08) 0%,
-        rgba(26, 35, 50, 0.4) 50%,
-        rgba(244, 208, 63, 0.05) 100%
-    );
+    background: linear-gradient(145deg,
+            rgba(244, 208, 63, 0.08) 0%,
+            rgba(26, 35, 50, 0.4) 50%,
+            rgba(244, 208, 63, 0.05) 100%);
     box-shadow:
         0 0 50px rgba(244, 208, 63, 0.25),
         0 0 100px rgba(244, 208, 63, 0.08),
@@ -248,6 +251,7 @@ body {
         transform: scale(0.95) translateY(20px);
         filter: brightness(0.5);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -269,22 +273,23 @@ body {
     left: -30px;
     right: -30px;
     bottom: -30px;
-    background: radial-gradient(
-        circle,
-        rgba(244, 208, 63, 0.15) 0%,
-        rgba(244, 208, 63, 0.05) 40%,
-        transparent 70%
-    );
+    background: radial-gradient(circle,
+            rgba(244, 208, 63, 0.15) 0%,
+            rgba(244, 208, 63, 0.05) 40%,
+            transparent 70%);
     border-radius: 25px;
     animation: mandalaPulse 5s ease-in-out infinite;
     pointer-events: none;
 }
 
 @keyframes mandalaPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 0.5;
     }
+
     50% {
         transform: scale(1.06);
         opacity: 0.85;
@@ -301,25 +306,43 @@ body {
 }
 
 /* Base: all children hidden, animated purely via CSS */
-.hero-narrative > * {
+.hero-narrative>* {
     opacity: 0;
     transform: translateY(16px);
     animation: narrativeReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 /* Staggered delays — smooth cascade, not robotic */
-.hero-narrative > *:nth-child(1) { animation-delay: 0.5s; }
-.hero-narrative > *:nth-child(2) { animation-delay: 0.7s; }
-.hero-narrative > *:nth-child(3) { animation-delay: 0.9s; }
-.hero-narrative > *:nth-child(4) { animation-delay: 1.15s; }
-.hero-narrative > *:nth-child(5) { animation-delay: 1.4s; }
-.hero-narrative > *:nth-child(6) { animation-delay: 1.65s; }
+.hero-narrative>*:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.hero-narrative>*:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.hero-narrative>*:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.hero-narrative>*:nth-child(4) {
+    animation-delay: 1.15s;
+}
+
+.hero-narrative>*:nth-child(5) {
+    animation-delay: 1.4s;
+}
+
+.hero-narrative>*:nth-child(6) {
+    animation-delay: 1.65s;
+}
 
 @keyframes narrativeReveal {
     from {
         opacity: 0;
         transform: translateY(16px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -333,6 +356,7 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.05;
     letter-spacing: 3px;
+    white-space: nowrap;
 }
 
 .highlight {
@@ -741,13 +765,13 @@ body {
 /* ========================================
    MISSION SECTION
    ======================================== */
-.mission-section .container > * {
+.mission-section .container>* {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.mission-section .container > *.animate {
+.mission-section .container>*.animate {
     opacity: 1;
     transform: translateY(0);
 }
@@ -928,13 +952,13 @@ body {
 /* ========================================
    EVENTS SECTION
    ======================================== */
-.events-section .container > * {
+.events-section .container>* {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.events-section .container > *.animate {
+.events-section .container>*.animate {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1226,6 +1250,80 @@ body {
 }
 
 /* ========================================
+   SOCIAL MEDIA LINKS — HERO
+   ======================================== */
+.hero-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+    opacity: 0;
+    animation: narrativeReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+}
+
+.social-link-hero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(244, 208, 63, 0.4);
+    color: var(--accent-gold);
+    background: rgba(244, 208, 63, 0.06);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+}
+
+.social-link-hero:hover {
+    border-color: var(--accent-gold);
+    background: rgba(244, 208, 63, 0.15);
+    box-shadow: 0 0 20px rgba(244, 208, 63, 0.4),
+        0 0 40px rgba(244, 208, 63, 0.15);
+    transform: translateY(-3px);
+    color: var(--accent-gold-light);
+}
+
+.social-link-hero svg {
+    transition: transform 0.3s ease;
+}
+
+.social-link-hero:hover svg {
+    transform: scale(1.1);
+}
+
+/* ========================================
+   SOCIAL MEDIA LINKS — FOOTER
+   ======================================== */
+.footer-social-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.social-link-footer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 208, 63, 0.3);
+    color: rgba(244, 208, 63, 0.7);
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link-footer:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    background: rgba(244, 208, 63, 0.1);
+    box-shadow: 0 0 12px rgba(244, 208, 63, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ========================================
    FOOTER
    ======================================== */
 .footer {
@@ -1483,6 +1581,10 @@ body {
         flex-direction: column;
         gap: 2.5rem;
         text-align: center;
+    }
+
+    .footer-social-links {
+        justify-content: center;
     }
 
     .footer-links {
@@ -1830,6 +1932,7 @@ html {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -2084,11 +2187,9 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(244, 208, 63, 0.04) 0%,
-        rgba(26, 35, 50, 0.95) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(244, 208, 63, 0.04) 0%,
+            rgba(26, 35, 50, 0.95) 100%);
     z-index: 1;
 }
 
@@ -2417,6 +2518,7 @@ html {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -2428,6 +2530,7 @@ html {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2439,6 +2542,7 @@ html {
         opacity: 0;
         transform: translateY(-100%);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2446,11 +2550,13 @@ html {
 }
 
 @keyframes cosmicPulse {
+
     0%,
     100% {
         box-shadow: 0 0 15px rgba(244, 208, 63, 0.8),
             0 0 30px rgba(244, 208, 63, 0.4);
     }
+
     50% {
         box-shadow: 0 0 25px rgba(244, 208, 63, 1),
             0 0 50px rgba(244, 208, 63, 0.6);
@@ -2458,21 +2564,25 @@ html {
 }
 
 @keyframes cosmicFloat {
+
     0%,
     100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-8px);
     }
 }
 
 @keyframes downloadPulse {
+
     0%,
     100% {
         box-shadow: 0 10px 30px rgba(244, 208, 63, 0.4),
             0 0 20px rgba(244, 208, 63, 0.3);
     }
+
     50% {
         box-shadow: 0 15px 40px rgba(244, 208, 63, 0.6),
             0 0 30px rgba(244, 208, 63, 0.5);
@@ -2480,10 +2590,12 @@ html {
 }
 
 @keyframes downloadBounce {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5px);
     }
@@ -2519,6 +2631,7 @@ html {
     0% {
         text-shadow: 0 0 20px rgba(244, 208, 63, 0.8);
     }
+
     100% {
         text-shadow: 0 0 30px rgba(244, 208, 63, 1),
             0 0 40px rgba(244, 208, 63, 0.6);
