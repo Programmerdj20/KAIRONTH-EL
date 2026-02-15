@@ -354,45 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Enhanced text columns animation
-    const textColumns = document.querySelector(".hero-text-columns");
-    if (textColumns) {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const leftText =
-                            entry.target.querySelector(".hero-text-left");
-                        const rightText =
-                            entry.target.querySelector(".hero-text-right");
-
-                        setTimeout(() => {
-                            leftText.style.opacity = "1";
-                            leftText.style.transform = "translateX(0)";
-                        }, 200);
-
-                        setTimeout(() => {
-                            rightText.style.opacity = "1";
-                            rightText.style.transform = "translateX(0)";
-                        }, 400);
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-
-        observer.observe(textColumns);
-
-        // Initial state
-        const leftText = textColumns.querySelector(".hero-text-left");
-        const rightText = textColumns.querySelector(".hero-text-right");
-        leftText.style.opacity = "0";
-        leftText.style.transform = "translateX(-30px)";
-        leftText.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        rightText.style.opacity = "0";
-        rightText.style.transform = "translateX(30px)";
-        rightText.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-    }
+    // Hero narrative animation is pure CSS (animation-delay on .hero-narrative > *)
 });
 
 // Utility function to scroll to a specific section
@@ -594,15 +556,15 @@ document.querySelectorAll(".content-card").forEach((card) => {
 window.addEventListener("load", () => {
     const loadingOverlay = document.getElementById("loading-overlay");
     
-    // Hide loading overlay after a delay
+    // Hide loading overlay quickly for a snappy feel
     setTimeout(() => {
         if (loadingOverlay) {
             loadingOverlay.classList.add("hidden");
             setTimeout(() => {
                 loadingOverlay.style.display = "none";
-            }, 500);
+            }, 400);
         }
-    }, 1500);
+    }, 600);
 });
 
 // Smooth reveal animation for sections
